@@ -1,0 +1,172 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman Numeral Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>ROMAN NUMERAL CONVERTER</h1>
+      <div class="input-container">
+        <label for="number-input">Enter a Number:</label>
+        <input
+          value=""
+          type="number"
+          name="decimal number input"
+          id="number"
+          class="number-input"
+        />
+        <button class="convert-btn" id="convert-btn">Convert</button>
+      </div>
+      <div id="output" for="number-input"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+const convertBtn = document.getElementById("convert-btn");
+const numberInput = document.getElementById("number");
+const output = document.getElementById("output");
+
+
+const convertToRomanNumbers = (number) => {
+  const romanMapping = [
+    { value: 1000, symbol: "M" },
+    { value: 900, symbol: "CM" },
+    { value: 500, symbol: "D" },
+    { value: 400, symbol: "CD" },
+    { value: 100, symbol: "C" },
+    { value: 90, symbol: "XC" },
+    { value: 50, symbol: "L" },
+    { value: 40, symbol: "XL" },
+    { value: 10, symbol: "X" },
+    { value: 9, symbol: "IX" },
+    { value: 5, symbol: "V" },
+    { value: 4, symbol: "IV" },
+    { value: 1, symbol: "I" }
+  ];
+
+  let romanNumString = "";
+
+  for (const { value, symbol } of romanMapping) {
+    while (number >= value) {
+      romanNumString += symbol;
+      number -= value;
+    }
+  }
+
+  return romanNumString;
+};
+
+const convertBtnClicked = () => {
+  if (!numberInput.value) {
+    output.innerText = "Please enter a valid number";
+    return;
+  } else if (numberInput.value <= 0) {
+    output.innerText = "Please enter a number greater than or equal to 1";
+    return;
+  } else if (numberInput.value >= 4000) {
+    output.innerText = "Please enter a number less than or equal to 3999";
+    return
+  } else {
+    output.innerText = convertToRomanNumbers(numberInput.value);
+    return;
+  }
+}
+
+convertBtn.addEventListener("click", convertBtnClicked);
+
+** end of undefined **
+
+** start of undefined **
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-grey: #f5f6f7;
+  --dark-blue: #1b1b32;
+  --orange: #f1be32;
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: var(--light-grey);
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 20px 0;
+}
+
+.input-container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.convert-btn {
+  background-color: var(--orange);
+  cursor: pointer;
+  border: none;
+  padding: 4px;
+}
+
+.number-input {
+  height: 25px;
+}
+
+#output {
+  margin: 10px 0;
+  min-width: 200px;
+  width: fit-content;
+  min-height: 80px;
+  word-break: break-word;
+  padding: 15px;
+  border: 5px solid grey;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  .input-container {
+    flex-direction: row;
+  }
+
+  #result {
+    max-width: 460px;
+  }
+}
+
+** end of undefined **
+
