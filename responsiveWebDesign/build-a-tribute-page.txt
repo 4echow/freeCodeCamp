@@ -1,0 +1,89 @@
+** start of undefined **
+
+<DOCTYPE! html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="certification project: tribute page" />
+    <title>Alexander Zass Tribute Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title">The Iron Samson: Alexander Zass</h1>
+      <p>The father of modern western isometric strength training</p>
+      <figure id="img-div">
+        <img id="image" src="https://www.glassthought.com/assets/images/Screen_Shot_2022-11-07_at_8.36.29_AM.png" alt="Old Grayscale image of Alexander Zass showing an incredible feat of strength by carrying a horse on his shoulders">
+        <figcaption id="img-caption">Alexander Zass showing an incredible feat of strength by carrying a horse on his back, which he achieved through his proposed method of isometric strength training. He is smiling for the camera on this early 20th century photo while simultaniously shouldering a multiple hundred kilo heavy animal.</figcaption> 
+      </figure>
+      <section id="tribute-info">
+        <h3>Here's a brief timeline of the Iron Samson's life:</h3>
+        <ul><li><b>1888:</b> Alexander Zass is born on February 22 in Vilnius, Lithuania.</li>
+        <li> <b>Early 1900s:</b> Zass becomes interested in physical training and strength development.</li>
+        <li><b>1911:</b> Zass joins the Russian Army and serves during World War I.</li>
+        <li><b>1912:</b> While a prisoner of war, Zass discovers the benefits of isometric exercises to maintain strength without equipment.</li>
+        <li> <b>1917:</b> Zass escapes from captivity by bending the bars of his prison cell.</li>
+        <li><b>1920s:</b> Zass begins performing as a strongman, showcasing his strength and abilities.</li>
+        <li> <b>1924:</b> He coins the term "Isometrics" to describe his training methods.</li>
+        <li><b>1930s:</b> Zass continues to perform and gain recognition for his strength feats.</li>
+        <li> <b>World War II:</b> Zass serves in the Soviet Army during the war.</li>
+        <li><b>Post-war:</b> Zass immigrates to the United Kingdom.</li>
+        <li> <b>1962:</b> Alexander Zass passes away on September 23 in London, United Kingdom.</li>
+        </ul>
+        <blockquote cite="https://legendarystrength.com/alexander-zass/#:~:text=Without%20tendons%20one%20would%20possess,won't%20hold%20horses%20back.">
+          <p>"I am tendon-strong.
+             Muscles alone won’t hold horses back. Tendons will – and do. But they must be cultivated. Oh, yes. They must be developed. There is a way of increasing their strength, and that way, I claim in all modesty, I have perfected. Real, sound, and efficient is my method."</p>
+          <cite>-- Alexander Zass, The Iron Samson</cite>
+        </blockquote>
+        <h3>If you wish to learn more, feel free to read the Wikipedia entry on the incredible life of the <a id="tribute-link" target="_blank" href="https://en.wikipedia.org/wiki/Alexander_Zass">Iron Samson</a> .</h3>
+      </section>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto,
+}
+
+ul > li {
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  list-style: none;
+}
+ul {
+  margin-bottom: 4em;
+}
+blockquote {
+  margin-bottom: 4em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+#tribute-info h3:last-of-type {
+  font-size: 1rem;
+}
+
+figure {
+  margin-bottom: 4em;
+  margin-top: 2em;
+}
+
+** end of undefined **
+

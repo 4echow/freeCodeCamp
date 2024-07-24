@@ -1,0 +1,220 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My fCC Product Landing Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+      <header id="header">
+        <img 
+          id="header-img"
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+          alt="freecodecamp logo"
+          loading="lazy"
+        />
+        <nav id="nav-bar">
+            <a class="nav-link" href="#Features">Features</a>
+            <a class="nav-link" href="#How_It_Works">How It Works</a>
+            <a class="nav-link" href="#Pricing">Pricing</a>
+        </nav>
+      </header>
+    <main id="main-doc">
+      <section class="main-section" id="form-section">
+        <h1>Are you ready to learn coding? Register now!</h1>
+        <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
+          <input 
+            id="email" 
+            name="email" 
+            type="email" 
+            placeholder="youremail@email.com"
+          /> <hr>
+          <input 
+            id="submit" 
+            type="submit" 
+            value="GET STARTED" 
+          />
+        </form>
+        <p>Take advantage of numerous free lessons on freeCodeCamp.com. It only costs your time.
+    </section>
+      <section class="main-section" id="Features">
+        <div class="feature-box">
+          <div id="feature-icon">
+            <i class="material-icons" style="font-size: 42px">devices</i>
+            </div>
+          <div id="feature-description">
+            <h3>Learn Responsive Web Design</h3>
+            <p>Ever wanted to learn to build web-pages that look good on both handheld and desktop devices? Here's your chance!
+          </div>
+        </div>
+        <div class="feature-box">
+          <div id="feature-icon">
+            <i class="material-icons" style="font-size: 42px">access_time</i>
+          </div>
+          <div id="feature-description">
+            <h3>Learn it in your own time</h3>
+            <p>It may take many hours of dedicated learning, but you can get to coding mastery in your own pace. Just keep going!
+          </div>
+        </div>
+        <div class="feature-box">
+          <div id="feature-icon">
+            <i class="material-icons" style="font-size: 42px">card_membership</i>
+          </div>
+          <div id="feature-description">
+            <h3>Earn Certifications</h3>
+            <p>Complete all the required projects and show to the world how much you've learned with fCC's online certifications. 
+          </div>
+        </div>
+      </section>
+      <section class="main-section" id="How_It_Works">
+          <iframe id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen>
+          </iframe> 
+      </section>
+      <section class="main-section" id="Pricing">
+        <div class="product-card" id="RWD_Course">
+          <h3>Responsive Web Design</h3>
+          <h2>300 Hours</h2>
+          <p>Lorem ipsum</p>
+          <p>lorem ipsum</p>
+          <p>Lorem ipsum</p>
+          <input type="button" value="SELECT" />
+        </div>
+        <div class="product-card" id="product-2">
+          <h3>JavaScript Algorithms and Data Structures</h3>
+          <h2>400 Hours</h2>
+          <p>Lorem ipsum</p>
+          <p>lorem ipsum</p>
+          <p>Lorem ipsum</p>
+          <input type="button" value="SELECT" />
+        </div>
+        <div class="product-card" id="product-3">
+          <h3>Front End Development Libraries</h3>
+          <h2>500 Hours</h2>
+          <p>Lorem ipsum</p>
+          <p>lorem ipsum</p>
+          <p>Lorem ipsum</p>
+          <input type="button" value="SELECT" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #070924
+}
+
+#header-img {
+  max-width: 180px;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 50px;
+  right: 0;
+}
+
+.nav-link {
+  color: #000;
+  padding: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fef
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+.feature-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+}
+
+#video {
+  width: 560px;
+  height: 315px;
+}
+
+#submit {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#Pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: calc(100% / 3);
+  margin: 12px;
+}
+
+.product-card input {
+  margin-bottom: 12px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  padding-right: 8px;
+  background: #070924;
+  height: 80px
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+** end of undefined **
+
